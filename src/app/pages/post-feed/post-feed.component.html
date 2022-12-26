@@ -1,0 +1,6 @@
+<div class="posts-feed-container">
+  <app-post *ngFor="let post of posts" [postData]="post"></app-post>
+</div>
+<button (click)="onCreatePostClick()" mat-fab color="primary" class="post-btn">
+  <mat-icon>add</mat-icon>
+</button>

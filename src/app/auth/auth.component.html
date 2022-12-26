@@ -1,0 +1,82 @@
+<div class="auth">
+  <mat-card class="auth-content">
+    <div *ngIf="isLoginState()">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <input
+        #loginEmail
+        type="email
+        "
+        placeholder="Email"
+      />
+      <input #loginPassword type="password" placeholder="Password" />
+      <button
+        (click)="onLoginClick(loginEmail, loginPassword)"
+        mat-flat-button
+        color="primary"
+      >
+        Login
+      </button>
+    </div>
+
+    <div *ngIf="isRegisterState()">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+      <!--  -->
+      <input #registerEmail type="email" placeholder="Email" />
+      <input #registerPassword type="password" placeholder="Password" />
+      <input
+        #registerConfirmPassword
+        type="password"
+        placeholder="Confirm Password"
+      />
+
+      <button
+        (click)="
+          onRegisterClick(
+            registerEmail,
+            registerPassword,
+            registerConfirmPassword
+          )
+        "
+        mat-flat-button
+        color="primary"
+      >
+        Create Account
+      </button>
+    </div>
+
+    <div *ngIf="isForgottenPasswordState()">
+      <mat-card-header>
+        <mat-card-title>Reset Password</mat-card-title>
+      </mat-card-header>
+      <!--  -->
+      <input #resetEmail type="email" placeholder="Email" />
+      <button
+        (click)="onPasswordResetClick(resetEmail)"
+        mat-flat-button
+        color="primary"
+      >
+        Reset
+      </button>
+    </div>
+
+    <mat-card-actions align="end">
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="onForgotenPasswordClick()"
+      >
+        Forgot Password
+      </button>
+      <button mat-flat-button color="primary" (click)="onCreateAccountClick()">
+        Create Account
+      </button>
+      <button mat-flat-button color="primary" (click)="onLoginClicked()">
+        Login
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

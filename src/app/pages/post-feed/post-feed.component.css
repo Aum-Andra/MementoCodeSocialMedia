@@ -1,0 +1,10 @@
+.post-btn{
+    position:fixed;
+    bottom:2rem;
+    right: 2rem;
+}
+.posts-feed-container{
+    max-width: 500px;
+    margin-top: 5rem;
+    margin: 0 auto;
+}

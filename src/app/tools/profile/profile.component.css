@@ -1,0 +1,37 @@
+.profile{
+position:fixed;
+top:0;
+right: 0;
+height: 100vh;
+background-color:#240D34;
+z-index: 9;
+transition-duration: .5s;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.profile-content{
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+.active{
+width: 100vw;
+}
+.idle{
+    width: 0;
+
+}
+input,textarea{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .2rem;
+    margin-bottom: .5rem;
+    resize: none;
+    outline: none;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
